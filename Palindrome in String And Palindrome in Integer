@@ -1,0 +1,48 @@
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a original number:");
+        int num=sc.nextInt();
+        
+        int originalnum =num;//input:56865
+        
+        int rev =0;
+        while(num!=0){
+            rev=rev*10+num%10;
+            num=num/10;
+        }
+        System.out.println("Reversed Number:"+rev);//output:56865
+    
+    if(originalnum==rev){
+        System.out.println("Palindrome");//output-palindrome
+    }
+    else{
+        System.out.println("It is not a Palindrome");
+    }
+}
+}
+2.import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter an original string:");
+        String str = sc.nextLine();
+        
+        // Reverse the string
+        String rev = "";
+        int length = str.length();
+        for (int i = length - 1; i >= 0; i--) {
+            rev += str.charAt(i);
+        }
+        System.out.println("Reversed String: " + rev);
+       
+        // Check if the original string is equal to the reversed string
+        if (str.equals(rev)) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("It is not a Palindrome");
+        }
+    }
+}
